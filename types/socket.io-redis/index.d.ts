@@ -184,5 +184,12 @@ declare namespace SocketIORedis {
 		 * @param {(err: any, replies: any[]) => void} callback
 		 */
 		customRequest(data: any, callback: (err: any, replies: any[]) => void) : void;
+        		
+		/**
+		 * customHook receives data of customRequest from every nodes.
+		 * @param {any} data received data.
+		 * @param {(data: any) => void} callback send data to resopond
+		 */
+		customHook(data: any, callback: (data: any) => void): void;
 	}
 }
